@@ -47,11 +47,11 @@ const misDatosDePerfil = {
         rock: "La célula que explota",
         corridosTumbados: "Ella baila sola"
     },
-    nombreCompleto: function fullName(){
+    nombreCompleto: function fullName() {
         return this.nombre + " " + this.apellido + " , soy el belicón";
     }
 };
-const misDatosDeInstagram= {
+const misDatosDeInstagram = {
     /*clave :valor  */
     nombre: "Jupafimo",
     apellido: "kliny",
@@ -61,12 +61,29 @@ const misDatosDeInstagram= {
         rock: "La célula que explota",
         corridosTumbados: "Ella baila sola"
     },
-    nombreCompleto: function fullName(){
+    nombreCompleto: function fullName() {
         return this.nombre + " " + this.apellido + " , soy el cumbiachero";
     }
 };
 console.log("Datos completos: ", misDatosDePerfil);
 console.log("Nombre: ", misDatosDePerfil.nombre);
 console.log("Música de fin de semana: ", misDatosDePerfil.musicaPreferidaPorGenero.corridosTumbados);
-console.log("Nombre Completo: ",  misDatosDePerfil.nombreCompleto());
+console.log("Nombre Completo: ", misDatosDePerfil.nombreCompleto());
 console.log("Nombre Completo: ", misDatosDeInstagram.nombreCompleto());
+
+//Array Almacena diferentes tipos de datos, su primer elemento es el indice 0
+
+const cancionesPP = [
+    "Soy el belicón",
+    "El tsurito",
+    "AMG",
+    "El azul",
+    {
+        2020: 5,
+        2021: 30,
+        2022: 56
+    }
+
+
+];
+console.log("Cancion con color: ", cancionesPP[3]);
