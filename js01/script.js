@@ -113,7 +113,15 @@ console.log("Valor de sumatoria: ", sumatoria);
 // toParseInt
 
 const myStringInteger = "420.2020";
-const sumatoriaEntera = 80 + Number(myString);
-console.log("Valor de sumatoria: ", parseInt(sumatoriaEntera));
+const sumatoriaEntera = 80 + parseFloat(myStringInteger);
+console.log("Valor de sumatoria: ", sumatoriaEntera);
 
-// toExponential
+// toBoolean
+const isBelicoso = "true"
+console.log( typeof isBelicoso);
+console.log( isBelicoso);
+
+if (Boolean(isBelicoso))
+    console.log("Denle su belikin");
+else
+    console.log("Abra paso a la barredora");
