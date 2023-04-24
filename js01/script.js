@@ -118,10 +118,16 @@ console.log("Valor de sumatoria: ", sumatoriaEntera);
 
 // toBoolean
 const isBelicoso = "true"
-console.log( typeof isBelicoso);
-console.log( isBelicoso);
+console.log(typeof isBelicoso);
+console.log(isBelicoso);
 
-if (Boolean(isBelicoso))
+if (isBelicoso === "false")
     console.log("Denle su belikin");
 else
     console.log("Abra paso a la barredora");
+    //Boolean
+    // Para que sea False, debe ser : "", 0 , Null, Undefined.
+    // Number
+    //[]=0,[30]= 30, [3,1]= NaN, false = 0, true=1;
+    //String
+    //[]= "",[1,2]= "1,2",
