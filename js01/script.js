@@ -29,6 +29,25 @@ console.log("Tipo de variable indefinido: ", myVar);
 /* Null Intensionalmente se borra el tipo de dato */
 let myVarNull = null; /* solo se declara */
 myVarNull = "Saludos Sr. PP"; /* Se asigna un dato String */ 
-console.log("tipo de dato myVarNull: ", typeof(myVarNull))/* string */
+console.log("tipo de dato myVarNull: ", typeof(myVarNull));/* string */
 myVarNull = null;
-console.log("tipo de dato myVarNull: ", typeof(myVarNull))/* null */
+console.log("tipo de dato myVarNull: ", typeof(myVarNull));/* null */
+
+/* symbol crea propiedades privadas en los objetos */
+
+/* Tipos de datos Object 
+Object: */
+const misDatos = { 
+/*clave :valor  */
+nombre: "Juan Pablo",
+apellido: "Figueroa",
+edad: 25,
+isBelicoso: false,
+musicaPreferidaPorGenero: {
+    rock:"La célula que explota",
+    corridosTumbados:"Ella baila sola"
+}
+};
+console.log("Datos completos: ", misDatos);
+console.log("Nombre: ", misDatos.nombre);
+console.log("Música de fin de semana: ", misDatos.musicaPreferidaPorGenero.corridosTumbados);
