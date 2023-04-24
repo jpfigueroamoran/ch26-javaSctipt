@@ -81,9 +81,39 @@ const cancionesPP = [
     {
         2020: 5,
         2021: 30,
-        2022: 56
+        2022: 56,
+        total: 91,
     }
 
 
 ];
 console.log("Cancion con color: ", cancionesPP[3]);
+console.log("Canciones realizadas en el año 2021: ", cancionesPP[4].total);
+console.log("Canciones realizadas en el año 2021: ", cancionesPP[4]["total"]);
+console.log("Canciones realizadas en el año 2021: ", cancionesPP[4][2021]);
+console.log("Canciones realizadas en el año 2021: ", cancionesPP[4]["2021"]);
+
+console.log("Número total de elementos: ", cancionesPP.length);
+console.log("Contiene la cancion AMG: ", cancionesPP.indexOf("AMG") > -1);
+
+/* Conversión de datos */
+
+const myNumber = 420; // Minutos en la sesión JS01
+console.log("Num. minutos en la sesión JS01: " + myNumber);
+//to String
+const myNumberTxt = String(myNumber);
+console.log("Num. minutos en la sesión JS01: " + myNumberTxt);
+
+// toNumber
+
+const myString = "420.34";
+const sumatoria = 80 + Number(myString);
+console.log("Valor de sumatoria: ", sumatoria);
+
+// toParseInt
+
+const myStringInteger = "420.2020";
+const sumatoriaEntera = 80 + Number(myString);
+console.log("Valor de sumatoria: ", parseInt(sumatoriaEntera));
+
+// toExponential
