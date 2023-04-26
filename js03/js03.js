@@ -103,7 +103,7 @@ console.log(mensaje);
 //mes 9,10,11 = otoño
 // Usar if-else
 
-const getEstacion = (mes) => {
+/* const getEstacion = (mes) => {
     let estacion;
   
     if (mes === 12 || mes === 1 || mes === 2) {
@@ -129,7 +129,7 @@ const getEstacion = (mes) => {
     const estacion = getEstacion(mes);
     const resultado = document.getElementById("resultado");
     resultado.textContent = `La estación correspondiente al mes ${mes} es ${estacion}.`;
-  });
+  }); */
 
 /* ----------Switch------------ 
 La instrucción switch evalua una expresion y se compara con el valor de cada 
@@ -151,7 +151,7 @@ Sintexis:
   }
 */
 
-const setVelocidadVentilador= (velocidad)=>{ 
+/* const setVelocidadVentilador= (velocidad)=>{ 
     
     let msj;
     switch (velocidad){
@@ -177,4 +177,77 @@ const setVelocidadVentilador= (velocidad)=>{
 } 
 return msj;
 }
-console.log(`La velocidad del ventilador esta en ${setVelocidadVentilador(4)}`)
+console.log(`La velocidad del ventilador esta en ${setVelocidadVentilador(4)}`) */
+
+const getEstacion = (mes) => {
+    let estacion;
+  
+    switch (mes) {
+      case 12:
+      case 1:
+      case 2:
+        estacion = "invierno";
+        break;
+      case 3:
+      case 4:
+      case 5:
+        estacion = "primavera";
+        break;
+      case 6:
+      case 7:
+      case 8:
+        estacion = "verano";
+        break;
+      case 9:
+      case 10:
+      case 11:
+        estacion = "otoño";
+        break;
+      default:
+        estacion = "El número ingresado no es válido.";
+    }
+  
+    return estacion;
+  }
+  
+    const boton = document.getElementById("calcular");
+    boton.addEventListener("click", () => {
+    const mesInput = document.getElementById("mes");
+    const mes = parseInt(mesInput.value);
+  
+    const estacion = getEstacion(mes);
+    const resultado = document.getElementById("resultado");
+    resultado.textContent = `La estación correspondiente al mes ${mes} es ${estacion}.`;
+  });
+  
+
+  /* -----------------Operador condicional ternario-------------- */
+  /* Es el unico operador e JS que tiene 3 operandos.
+  Generalmente se usa como ipcion a la sentencia if-else */
+
+  /* Sintaxis
+   condicion ? expresionSiCondicionEsVerdadera : exprecionSiCondicionEsFalsa;
+
+  */
+ const subTotal = 1_000;
+ const pagoDeTarjeta = false;
+/*  let msj;
+ if(pagoDeTarjeta) msj = subTotal*1.025;
+ else msj = subTotal*1; */
+
+ console.log(`La cuenta es de ${ pagoDeTarjeta ? subTotal*1.025 : subTotal*1} pesos`)
+
+ const edad = 40;
+ //Se permite el acces al antro de mala muerte?
+ console.log(`Acceso ${edad>=18 ? "permitido": "Denegado"}  `);
+ // Con los de 17 años
+ 
+ console.log(`Tu acceso :  ${edad>=50 ? "Ya estas viejo": "Diviertete"}  `);
+
+ /*  */
+ const printGreetings = number => {
+    let result = (number > 1) ? printGreetings(number-1) : number;
+    console.log("Greeting", result);
+    return number+1;
+};
+printGreetings(10);
