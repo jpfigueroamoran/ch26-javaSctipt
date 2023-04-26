@@ -130,3 +130,51 @@ const getEstacion = (mes) => {
     const resultado = document.getElementById("resultado");
     resultado.textContent = `La estación correspondiente al mes ${mes} es ${estacion}.`;
   });
+
+/* ----------Switch------------ 
+La instrucción switch evalua una expresion y se compara con el valor de cada 
+instancia en "case" hasya que se encuentra la sentencia "break"
+
+Sintexis:
+  switch(expresion){
+    case valor1:
+        sentencia;
+        break;
+    case valor2:
+        sentencia;
+        break;
+    case valorN:
+        sentencia;
+        break;
+    default:
+        sentencias;
+  }
+*/
+
+const setVelocidadVentilador= (velocidad)=>{ 
+    
+    let msj;
+    switch (velocidad){
+    case 0:
+        msj = "apagado";
+        break;
+    case 1:
+        msj = "Velocidad Baja";
+        break;
+    case 2:
+        msj = "Velocidad Media";
+        break;
+    case 3:
+        msj = "Velocidad Alta";
+        break;
+    case 4:
+    case 5:
+        msj = "Desnucadora";
+        break;
+    default:
+        msj = "E nivel no existe";
+        break;
+} 
+return msj;
+}
+console.log(`La velocidad del ventilador esta en ${setVelocidadVentilador(4)}`)
