@@ -252,3 +252,26 @@ const contarLetras = (frase) => {
   
   contarLetras('pepe pecas pica papas con un pico');
   
+  //-------------Funciones recursivas-------------
+  // Esta es una técnica de programacion en donde la funcion se llama así misma.
+  // Se debe tener precausión de no entrar en un bucle infinito
+
+ /*  function funcionRecursiva(valor){
+    if (condicionDeParo){
+
+    }
+    else{
+        // llamada recursiva
+    }
+  }; */
+
+  const saludar = ( numero ) => {
+    if( numero === 1){
+        console.log("Saludo " + numero);
+    }else{
+        saludar(numero - 1)
+        console.log("Saludo " + numero);
+    };
+};
+
+saludar(10);
