@@ -49,7 +49,6 @@ getProductsWithAwait( url );
 
 
 //----------Realizar una solicitud Post-------------
-
 const postUSer =(url, userData) =>{
     fetch(url,{
         method:"POST",
@@ -57,8 +56,8 @@ const postUSer =(url, userData) =>{
         headers: {'Content-Type':'application/json'}
     })
     .then((response) => response.json())
-    .then((register) => console.log(register.createdAt))
-    .catch(() => {});
+    .then((register) => console.log(register))
+    .catch((error) => console.error("no se encontro la información"));
 }
 
 user = {
