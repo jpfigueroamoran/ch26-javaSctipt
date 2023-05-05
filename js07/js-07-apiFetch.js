@@ -46,3 +46,26 @@ const getProductsWithAwait = async ( httpUrl) => {
 }
 
 getProductsWithAwait( url );
+
+
+//----------Realizar una solicitud Post-------------
+
+const postUSer =(url, userData) =>{
+    fetch(url,{
+        method:"POST",
+        body: JSON.stringify(userData),// conversion de objeto=>JSON
+        headers: {'Content-Type':'application/json'}
+    })
+    .then((response) => response.json())
+    .then((register) => console.log(register.createdAt))
+    .catch(() => {});
+}
+
+user = {
+    name:"El Iván",
+    job:"leader"
+}
+
+const urlPOST = "https://reqres.in/api/users/";
+
+postUSer(urlPOST, user);
