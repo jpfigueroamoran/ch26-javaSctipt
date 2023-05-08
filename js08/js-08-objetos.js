@@ -38,4 +38,11 @@ for (dato in datosEmpleado){
 
 localStorage.setItem('datosEmpleado', JSON.stringify(datosEmpleado));
 
-//Bote  de lunetas
+console.log(datosEmpleado["2"] ); // 12
+console.log(datosEmpleado["23"] ); // 666
+console.log(datosEmpleado[variableX] ); // 666
+variableX = 1000;
+console.log(datosEmpleado[variableX] ); // undefined
+
+//localStorage.setItem("datos-empleado",  JSON.stringify( datosEmpleado ));
+sessionStorage.setItem("datos-empleado",  JSON.stringify( datosEmpleado ));
