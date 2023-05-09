@@ -34,11 +34,11 @@ const getUsersAxiosAwait = async () => {
   const createUser = async (userData) => {
     try {
       const createdUser = await axios.post(url, userData);
-      console.log(createdUser); // o cualquier otra acción que desees realizar con los datos
+      console.log(createdUser); 
     } catch (error) {
       console.error(error);
     }
-  }
+  };
   
   const userData = {
     name: "Juan",
