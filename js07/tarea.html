@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App de Visualización de Datos</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="tarea.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Datos de Usuarios</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Avatar</th>
+          <th>Nombre</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="user-table-body">
+        <tr id="loading-row">
+          <td colspan="3" class="text-center">
+            <img src="progress.gif" alt="Cargando...">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="tarea.js"></script>
+</body>
+</html>
